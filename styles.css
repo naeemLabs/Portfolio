@@ -64,7 +64,8 @@ a:hover {
 #mainContent {
   position: relative;
   z-index: 100;
-  /* overflow-y: hidden; */
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 100vh;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(26, 26, 26, 0.6) 50%, rgba(0, 0, 0, 0.7) 100%);
   backdrop-filter: blur(2px);
@@ -1177,8 +1178,11 @@ footer {
   }
   
   .profile-card {
-    display: none;
+    /* display: none; */
+
+
   }
+
 }
 
 @media (max-width: 640px) {
