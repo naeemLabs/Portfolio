@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Muhammad Naeemullah — Angular Developer Portfolio</title>
+	<meta name="description"
+		content="Muhammad Naeemullah — Angular & TypeScript Developer. Portfolio showcasing 4+ years of experience in building scalable web applications." />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!-- Loading Screen -->
+	<div id="loadingScreen" class="loading-screen">
+		<div class="loading-container">
+			<div class="terminal-header">
+				<div class="terminal-buttons">
+					<div class="btn-circle red"></div>
+					<div class="btn-circle yellow"></div>
+					<div class="btn-circle green"></div>
+				</div>
+				<div class="terminal-title">portfolio@localhost:~</div>
+			</div>
+			<div class="terminal-body">
+				<div class="terminal-line">
+					<span class="prompt">$</span>
+					<span class="command">Loading your portfolio...</span>
+					<span class="cursor blink"></span>
+				</div>
+				<div class="loading-bar-container">
+					<div class="loading-bar"></div>
+				</div>
+				<div class="status-text">
+					<span class="status-label">Status:</span>
+					<span class="status-value">Initializing components...</span>
+				</div>
+			</div>
+		</div>
+		<div class="linux-logo">
+			<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" class="logo-circle" />
+				<path d="M 50 10 Q 70 30 70 50 Q 70 70 50 70 Q 30 70 30 50 Q 30 30 50 10" fill="none"
+					stroke="currentColor" stroke-width="2" class="logo-path" />
+				<circle cx="50" cy="35" r="3" fill="currentColor" class="logo-dot" />
+				<circle cx="50" cy="65" r="3" fill="currentColor" class="logo-dot" />
+			</svg>
+		</div>
+	</div>
+
+	<!-- Main Website -->
+	<div id="mainContent" class="main-content">
+		<div class="container">
+			<header>
+				<div class="brand">
+					<div class="logo">MN</div>
+					<div>
+						<div style="font-weight:800;color:#fff">Muhammad Naeemullah</div>
+						<div style="font-size:12px;color:var(--muted);margin-top:2px">Angular • TypeScript • Front-End
+							Developer</div>
+					</div>
+				</div>
+				<nav id="mainNav">
+					<a href="#home" data-title="Home">Home</a>
+					<a href="#about" data-title="About">About</a>
+					<a href="#projects" data-title="Projects">Projects</a>
+					<a href="#experience" data-title="Experience">Experience</a>
+					<a href="#contact" data-title="Contact">Contact</a>
+				</nav>
+			</header>
+
+			<main>
+				<section id="home" class="hero">
+					<div>
+						<div class="reveal">
+							<h1>Building scalable, high-performance web applications</h1>
+							<p class="sub">Passionate Angular Developer with 4 years of professional experience. Expert
+								in TypeScript, RxJS, Angular Material, and Tailwind CSS. I craft dynamic, responsive
+								user interfaces and mentor teams to deliver clean, maintainable code.</p>
+						</div>
+						<div class="ctas reveal" style="margin-top:18px">
+							<a class="btn btn-primary" href="#projects">View Work</a>
+							<a class="btn btn-ghost" href="#contact">Get In Touch</a>
+						</div>
+						<div style="margin-top:28px" class="reveal expertise">
+							<strong style="color:#fff">Expertise:</strong>
+							<div class="expertise-tags">
+								<div class="expertise-tag">Angular</div>
+								<div class="expertise-tag">TypeScript</div>
+								<div class="expertise-tag">RxJS</div>
+							</div>
+						</div>
+					</div>
+					<aside class="profile-card reveal">
+						<div class="profile-pic"
+							style="background:linear-gradient(135deg,#ffffff,#cccccc);font-size:32px">✦</div>
+						<div class="profile-meta">
+							<div style="font-weight:700;color:#fff">Muhammad Naeemullah</div>
+							<div style="font-size:13px;margin-top:6px">Lahore, Pakistan • 4 Years Angular Experience
+							</div>
+							<div style="font-size:12px;margin-top:8px;color:var(--accent1)">naeemdev.667@gmail.com</div>
+							<div style="margin-top:12px;display:flex;gap:8px">
+								<a href="#contact" class="btn btn-primary"
+									style="padding:8px 12px;font-size:14px">Contact</a>
+								<a href="https://www.linkedin.com/in/naeem-ullah" target="_blank" class="btn"
+									style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)">LinkedIn</a>
+							</div>
+						</div>
+					</aside>
+				</section>
+
+				<section id="projects">
+					<div class="section-title">
+						<h2>Selected Projects</h2>
+					</div>
+
+					<div class="grid projects" style="margin-top:28px">
+
+						<!-- FITINPART -->
+						<article class="project reveal">
+							<a href="#" class="project-link">
+								<div class="project-preview">
+									<img src="./assets/images/fitin-logo.jpg" alt="FITINPART" />
+								</div>
+								<h3>FITINPART — E-Commerce Platform</h3>
+								<p style="color:var(--muted);font-size:13px;line-height:1.6">
+									Auto parts e-commerce platform with advanced product catalog, smart search, admin
+									management, and global shipping API integrations.
+								</p>
+								<div class="tags">
+									<span class="tag">Angular</span>
+									<span class="tag">RxJS</span>
+									<span class="tag">E-Commerce</span>
+								</div>
+								<!-- <span class="view-project">View Project →</span> -->
+							</a>
+						</article>
+
+						<!-- SkyWorld -->
+						<article class="project reveal">
+							<a href="#" class="project-link">
+								<div class="project-preview">
+									<img src="./assets/images/sky-logo.png" alt="SkyWorld" />
+								</div>
+								<h3>SkyWorld — Admin Dashboard</h3>
+								<p style="color:var(--muted);font-size:13px;line-height:1.6">
+									Role-based admin dashboard featuring dynamic permissions, real-time data updates,
+									analytics tables, and Firebase-powered workflows.
+								</p>
+								<div class="tags">
+									<span class="tag">Angular</span>
+									<span class="tag">Firebase</span>
+									<span class="tag">Admin Panel</span>
+								</div>
+								<!-- <span class="view-project">View Project →</span> -->
+							</a>
+						</article>
+
+						<!-- Clubhouse Journeys -->
+						<article class="project reveal">
+							<a href="https://clubhouse-journey.web.app/" target="_blank" class="project-link">
+								<div class="project-preview">
+									<img src="./assets/images/club-logo.png" alt="Clubhouse Journeys" />
+								</div>
+								<h3>Clubhouse Journeys — Travel Platform</h3>
+								<p style="color:var(--muted);font-size:13px;line-height:1.6">
+									A transparent golf travel planning platform offering real course and hotel rates
+									with no hidden markups, making group trip planning simple and fair.
+								</p>
+								<div class="tags">
+									<span class="tag">Angular</span>
+									<span class="tag">Travel</span>
+									<span class="tag">Web App</span>
+								</div>
+								<!-- <span class="view-project">View Project →</span> -->
+							</a>
+						</article>
+
+						<!-- w3Du -->
+						<article class="project reveal">
+							<a href="https://w3du-75f0d.web.app/home" target="_blank" class="project-link">
+								<div class="project-preview">
+									<img src="./assets/images/w3du-logo" alt="w3Du" />
+								</div>
+								<h3>w3Du — 3D Printing Marketplace</h3>
+								<p style="color:var(--muted);font-size:13px;line-height:1.6">
+									End-to-end 3D printing platform connecting buyers with verified vendors, instant
+									bids, live tracking, secure escrow payments, and reviews.
+								</p>
+								<div class="tags">
+									<span class="tag">Angular</span>
+									<span class="tag">Marketplace</span>
+									<span class="tag">3D Tech</span>
+								</div>
+								<!-- <span class="view-project">View Project →</span> -->
+							</a>
+						</article>
+
+						<!-- City Explorer -->
+						<article class="project reveal">
+							<a href="https://city-explorer-staging.web.app/" target="_blank" class="project-link">
+								<div class="project-preview">
+									<img src="./assets/images/city-logo.jpg" alt="City Explorer" />
+								</div>
+								<h3>City Explorer — Live Streaming Platform</h3>
+								<p style="color:var(--muted);font-size:13px;line-height:1.6">
+									A global live-streaming platform enabling real-time cultural exploration through
+									trusted creators, guided commerce, and immersive experiences.
+								</p>
+								<div class="tags">
+									<span class="tag">Angular</span>
+									<span class="tag">Live Streaming</span>
+									<span class="tag">Global Platform</span>
+								</div>
+								<!-- <span class="view-project">View Project →</span> -->
+							</a>
+						</article>
+
+					</div>
+				</section>
+
+
+				<section id="about">
+					<div class="section-title">
+						<h2>About</h2>
+					</div>
+					<div class="grid" style="margin-top:18px;grid-template-columns:1fr 1fr;gap:24px">
+						<div class="reveal">
+							<p style="color:var(--muted);font-size:15px">Passionate and detail-oriented Angular
+								Developer with nearly 4 years of professional experience designing and building
+								scalable, high-performance web applications. I specialize in creating dynamic,
+								responsive user interfaces using modern technologies and delivering clean, maintainable
+								code that drives business impact.</p>
+						</div>
+						<div class="reveal" style="color:var(--muted);font-size:15px">
+							<ul>
+								<li>Expert in Angular & TypeScript architecture</li>
+								<li>RxJS state management & async patterns</li>
+								<li>Mentoring juniors & code quality leadership</li>
+								<li>RESTful API integration & optimization</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section id="skills">
+					<div class="section-title">
+						<h2>Technical Skills</h2>
+					</div>
+					<div class="grid skills" style="margin-top:28px">
+						<div>
+							<div class="skill"><strong style="color:#fff">Angular Framework</strong>
+								<div class="meter" style="margin-top:8px"><i style="width:95%"></i></div>
+							</div>
+							<div class="skill"><strong style="color:#fff">TypeScript</strong>
+								<div class="meter" style="margin-top:8px"><i style="width:92%"></i></div>
+							</div>
+							<div class="skill"><strong style="color:#fff">RxJS & State Management</strong>
+								<div class="meter" style="margin-top:8px"><i style="width:88%"></i></div>
+							</div>
+						</div>
+						<div>
+							<div class="skill"><strong style="color:#fff">Responsive Design</strong>
+								<div class="meter" style="margin-top:8px"><i style="width:90%"></i></div>
+							</div>
+							<div class="skill"><strong style="color:#fff">RESTful APIs & Integration</strong>
+								<div class="meter" style="margin-top:8px"><i style="width:89%"></i></div>
+							</div>
+							<div class="skill"><strong style="color:#fff">Performance Optimization</strong>
+								<div class="meter" style="margin-top:8px"><i style="width:85%"></i></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section id="contact">
+					<div class="section-title">
+						<h2>Contact</h2>
+					</div>
+					<div class="contact-row" style="margin-top:28px">
+						<div class="reveal contact-info">
+							<h3 style="margin-top:0;color:#fff">Let's build something great</h3>
+							<p style="color:var(--muted);line-height:1.6">I'm available for freelance, consulting, and
+								full-time roles. Tell me about your project and timeline.</p>
+							<div class="socials" style="margin-top:20px">
+								<a href="#">LinkedIn</a>
+								<a href="#">GitHub</a>
+								<a href="#">Email</a>
+							</div>
+						</div>
+
+						<form class="reveal" onsubmit="handleContact(event)">
+							<label>Name</label>
+							<input name="name" required placeholder="Your name" />
+							<label>Email</label>
+							<input name="email" type="email" required placeholder="your.email@example.com" />
+							<label>Message</label>
+							<textarea name="message" rows="4" required
+								placeholder="Tell me about your project..."></textarea>
+							<div style="display:flex;gap:10px;align-items:center">
+								<button class="btn btn-primary" type="submit">Send Message</button>
+								<div id="contactStatus" style="color:var(--muted);font-size:13px"></div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+				<footer>
+					© 2026 Muhammad Naeemullah — Crafted with care. • Built with HTML, CSS, Three.js
+				</footer>
+			</main>
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/three@0.154.0/build/three.min.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
+
+</div>
+
+<script src="https://unpkg.com/three@0.154.0/build/three.min.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
