@@ -1,5 +1,5 @@
 {
-  "homepage": "https://naeemlabs.github.io/my-react-app",
+ "homepage": "https://naeemlabs.github.io/Portfolio",
   "name": "magic-patterns-vite-template",
   "version": "0.0.1",
   "private": true,
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "preview": "npx vite preview",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^11.5.4",
