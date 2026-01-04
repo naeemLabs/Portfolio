@@ -4,55 +4,76 @@ import { staggerContainer, scaleIn } from '../hooks/useScrollAnimation';
 import { ExternalLink, Github, Eye } from 'lucide-react';
 import { Pagination } from './Pagination';
 import { ProjectModal } from './ProjectModal';
-const projects = [{
-  title: 'FITINPART',
-  category: 'E-Commerce Platform',
-  description: 'Auto parts e-commerce platform with advanced product catalog, smart search, admin management, and global shipping API integrations.',
-  image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2070&auto=format&fit=crop',
-  tags: ['Angular', 'RxJS', 'E-Commerce', 'API Integration'],
-  liveUrl: '#',
-  githubUrl: '#'
-}, {
-  title: 'SkyWorld',
-  category: 'Admin Dashboard',
-  description: 'Role-based admin dashboard featuring dynamic permissions, real-time data updates, analytics tables, and Firebase-powered workflows.',
-  image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
-  tags: ['Angular', 'Firebase', 'Admin Panel', 'Real-time'],
-  liveUrl: '#',
-  githubUrl: '#'
-}, {
-  title: 'Clubhouse Journeys',
-  category: 'Travel Platform',
-  description: 'A transparent golf travel planning platform offering real course and hotel rates with no hidden markups, making group trip planning simple and fair.',
-  image: 'https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=2070&auto=format&fit=crop',
-  tags: ['Angular', 'Travel', 'Web App', 'Booking System'],
-  liveUrl: 'https://clubhouse-journey.web.app/',
-  githubUrl: '#'
-}, {
-  title: 'w3Du',
-  category: '3D Printing Marketplace',
-  description: 'End-to-end 3D printing platform connecting buyers with verified vendors, instant bids, live tracking, secure escrow payments, and reviews.',
-  image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop',
-  tags: ['Angular', 'Marketplace', '3D Tech', 'Payment Integration'],
-  liveUrl: 'https://w3du-75f0d.web.app/home',
-  githubUrl: '#'
-}, {
-  title: 'City Explorer',
-  category: 'Live Streaming Platform',
-  description: 'A global live-streaming platform enabling real-time cultural exploration through trusted creators, guided commerce, and immersive experiences.',
-  image: 'https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?q=80&w=2069&auto=format&fit=crop',
-  tags: ['Angular', 'Live Streaming', 'WebRTC', 'Global Platform'],
-  liveUrl: 'https://city-explorer-staging.web.app/',
-  githubUrl: '#'
-}, {
-  title: 'Enterprise CRM',
-  category: 'Business Management',
-  description: 'Comprehensive CRM solution with customer tracking, sales pipeline management, automated workflows, and detailed analytics dashboards.',
-  image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
-  tags: ['Angular', 'CRM', 'Enterprise', 'Analytics'],
-  liveUrl: '#',
-  githubUrl: '#'
-}];
+import fitinpartImg from '../assets/images/fitin-logo.jpg';
+import skyworldImg from '../assets/images/sky-logo.png';
+import clubhouseImg from '../assets/images/club-logo.png';
+import w3duImg from '../assets/images/w3du-logo.png';
+import cityImg from '../assets/images/city-logo.jpg';
+
+const projects = [
+  {
+    title: 'FITINPART',
+    category: 'E-Commerce Platform',
+    description:
+      'Auto parts e-commerce platform with advanced product catalog, smart search, admin management, and global shipping API integrations.',
+    image: fitinpartImg,
+    tags: ['Angular', 'RxJS', 'E-Commerce', 'API Integration'],
+    liveUrl: 'https://www.fitinpart.sg/v2/en',
+    githubUrl: '#',
+  },
+  {
+    title: 'SkyWorld',
+    category: 'Admin Dashboard',
+    description:
+      'Role-based admin dashboard featuring dynamic permissions, real-time data updates, analytics tables, and Firebase-powered workflows.',
+    image: skyworldImg,
+    tags: ['Angular', 'Firebase', 'Admin Panel', 'Real-time'],
+    liveUrl: '#',
+    githubUrl: '#',
+  },
+  {
+    title: 'Clubhouse Journeys',
+    category: 'Travel Platform',
+    description:
+      'A transparent golf travel planning platform offering real course and hotel rates with no hidden markups, making group trip planning simple and fair.',
+    image: clubhouseImg,
+    tags: ['Angular', 'Travel', 'Web App', 'Booking System'],
+    liveUrl: 'https://clubhouse-journey.web.app/',
+    githubUrl: '#',
+  },
+  {
+    title: 'w3Du',
+    category: '3D Printing Marketplace',
+    description:
+      'End-to-end 3D printing platform connecting buyers with verified vendors, instant bids, live tracking, secure escrow payments, and reviews.',
+    image: w3duImg,
+    tags: ['Angular', 'Marketplace', '3D Tech', 'Payment Integration'],
+    liveUrl: 'https://w3du-75f0d.web.app/home',
+    githubUrl: '#',
+  },
+  {
+    title: 'City Explorer',
+    category: 'Live Streaming Platform',
+    description:
+      'A global live-streaming platform enabling real-time cultural exploration through trusted creators, guided commerce, and immersive experiences.',
+    image: cityImg,
+    tags: ['Angular', 'Live Streaming', 'WebRTC', 'Global Platform'],
+    liveUrl: 'https://city-explorer-staging.web.app/',
+    githubUrl: '#',
+  },
+  {
+    title: 'Enterprise CRM',
+    category: 'Business Management',
+    description:
+      'Comprehensive CRM solution with customer tracking, sales pipeline management, automated workflows, and detailed analytics dashboards.',
+    image:
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop', // external link is fine
+    tags: ['Angular', 'CRM', 'Enterprise', 'Analytics'],
+    liveUrl: '#',
+    githubUrl: '#',
+  },
+];
+
 const ITEMS_PER_PAGE = 6;
 export function Projects() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -101,7 +122,7 @@ export function Projects() {
                 scale: 1.1
               }} transition={{
                 duration: 0.6
-              }} src={project.image} alt={project.title} className="w-full h-full object-cover" />
+              }} src={project.image} alt={project.title} className="w-1/2 h-full object-contain m-auto" />
                 </div>
 
                 <div className="p-8">
@@ -115,9 +136,9 @@ export function Projects() {
                       </h3>
                     </div>
                     <div className="flex gap-3 relative z-20">
-                      {project.githubUrl !== '#' && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full">
+                      {/* {project.githubUrl !== '#' && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full">
                           <Github className="w-5 h-5" />
-                        </a>}
+                        </a>} */}
                       {project.liveUrl !== '#' && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()} className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full">
                           <ExternalLink className="w-5 h-5" />
                         </a>}

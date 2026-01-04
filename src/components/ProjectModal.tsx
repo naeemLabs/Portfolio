@@ -13,6 +13,7 @@ interface Project {
   gallery?: string[];
   year?: string;
   client?: string;
+  liveUrl?: string;
 }
 interface ProjectModalProps {
   project: Project | null;
@@ -30,7 +31,8 @@ export function ProjectModal({
     fullDescription: project.fullDescription || 'This project represents a significant milestone in modern web development, combining cutting-edge technologies with intuitive design principles. The architecture was built with scalability in mind, utilizing microservices and serverless functions to handle high traffic loads efficiently. The user interface underwent multiple iterations based on user testing feedback to ensure optimal usability.',
     gallery: project.gallery || [project.image, 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop', 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop'],
     year: '2023',
-    client: 'Confidential Client'
+    client: 'Confidential Client',
+    liveUrl: project.liveUrl || '#'
   };
   return <AnimatePresence>
       {isOpen && <>
@@ -144,12 +146,12 @@ export function ProjectModal({
                       </div>
 
                       <div className="mt-8 space-y-3">
-                        <Button className="w-full justify-center" icon>
+                        <Button className="w-full justify-center" href={project.liveUrl} icon>
                           Live Demo
                         </Button>
-                        <Button variant="outline" className="w-full justify-center">
+                        {/* <Button variant="outline" className="w-full justify-center">
                           <Github className="w-4 h-4 mr-2" /> Source Code
-                        </Button>
+                        </Button> */}
                       </div>
                     </div>
                   </div>

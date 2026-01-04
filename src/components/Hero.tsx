@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Download } from 'lucide-react';
 import { Button } from './ui/Button';
+import cvFile from '../assets/cv.pdf';
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const {
@@ -38,16 +39,16 @@ export function Hero() {
         duration: 1,
         ease: 'easeOut'
       }}>
-          <h2 className="text-cyan-400 font-medium tracking-widest mb-6 uppercase text-sm md:text-base">
+          <h2 className="text-cyan-400 font-medium tracking-widest mb-6 uppercase text-sm md:text-base pt-32 sm:pt-0">
             Angular • TypeScript • Front-End Developer
           </h2>
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white mb-8 leading-[0.9]">
+          <h1 className="text-4xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white mb-8 leading-[0.9]">
             BUILDING <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
               SCALABLE WEB APPS
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-md md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
             Passionate Angular Developer with 4+ years of professional
             experience. Expert in TypeScript, RxJS, Angular Material, and
             Tailwind CSS. I craft dynamic, responsive user interfaces and mentor
@@ -55,9 +56,20 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button href="#projects">View Projects</Button>
-            <Button variant="outline" href="/cv.pdf" download>
+            {/* <Button variant="outline" href="" download>
               <Download className="w-4 h-4 mr-2" /> Download CV
-            </Button>
+            </Button> */}
+            <Button
+  variant="outline"
+  onClick={() => {
+    const link = document.createElement('a');
+    link.href = cvFile; // imported file
+    link.download = 'Naeemullah_CV.pdf'; // name for download
+    link.click();
+  }}
+>
+  <Download className="w-4 h-4 mr-2" /> Download CV
+</Button>
           </div>
         </motion.div>
       </motion.div>
