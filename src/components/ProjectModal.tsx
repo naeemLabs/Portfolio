@@ -29,7 +29,7 @@ export function ProjectModal({
   // Mock data for extended details since the original project object is simple
   const extendedDetails = {
     fullDescription: project.fullDescription || 'This project represents a significant milestone in modern web development, combining cutting-edge technologies with intuitive design principles. The architecture was built with scalability in mind, utilizing microservices and serverless functions to handle high traffic loads efficiently. The user interface underwent multiple iterations based on user testing feedback to ensure optimal usability.',
-    gallery: project.gallery || [project.image, 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop', 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop'],
+    gallery: project.gallery || [],
     year: '2023',
     client: 'Confidential Client',
     liveUrl: project.liveUrl || '#'

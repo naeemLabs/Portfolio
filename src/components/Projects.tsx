@@ -33,7 +33,7 @@ const projects = [
   },
   {
     title: 'Clubhouse Journeys',
-    category: 'Travel Platform',
+    category: 'Golf Management Platform',
     description:
       'A transparent golf travel planning platform offering real course and hotel rates with no hidden markups, making group trip planning simple and fair.',
     image: clubhouseImg,

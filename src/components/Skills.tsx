@@ -4,7 +4,7 @@ import { Code2, Database, Layout, Terminal } from 'lucide-react';
 const skillCategories = [{
   title: 'Frontend Framework',
   icon: Layout,
-  skills: ['Angular 15+', 'TypeScript', 'RxJS', 'NgRx', 'Angular Material', 'Tailwind CSS', 'HTML5/CSS3', 'Responsive Design']
+  skills: ['Angular', 'React', 'Firebase', 'TypeScript', 'RxJS', 'NgRx', 'Angular Material', 'Tailwind CSS', 'HTML5/CSS3', 'Responsive Design']
 }, {
   title: 'State & Data Management',
   icon: Database,
